@@ -94,7 +94,7 @@ jwt:
   autoGenerate:
     ## @param jwt.autoGenerate.forceRun Force the run of the JWT generation job
     ##
-    forceRun: true
+    forceRun: false
     ## Bitnami JWT CLI image
     ## ref: https://hub.docker.com/r/bitnami/jwt-cli/tags/
     ## @param jwt.autoGenerate.image.registry JWT CLI image registry
@@ -2580,7 +2580,7 @@ kong:
 ## @param postgresql.service.ports.postgresql PostgreSQL service port
 ##
 postgresql:
-  enabled: false
+  enabled: true
   ## Bitnami PostgreSQL image version
   ## ref: https://hub.docker.com/r/bitnami/supabase-postgres/tags/
   ## @param postgresql.image.registry PostgreSQL image registry
@@ -2644,9 +2644,9 @@ postgresql:
 ##
 externalDatabase:
   host: ""
-  port: 54322
-  user: postgres
+  port: 5432
+  user: supabase_admin
   database: postgres
-  password: postgres
+  password: ""
   existingSecret: ""
   existingSecretPasswordKey: ""
